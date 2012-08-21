@@ -243,7 +243,7 @@ a.rss-link{
 	display:block;
 	width:24px;
 	height:24px;
-	background:url(Feed-icon.24.png) no-repeat center center;
+	background:url(../images/Feed-icon.24.png) no-repeat center center;
 }
 #site-nav a.rss-link{
 	margin-left:4px;
