@@ -29,11 +29,15 @@
           <li><a href="#">Chats</a></li>
         </ul>
         <a class="rss-link" href="#"></a>
-        <form id="site-search" class="inlineb">
+        <!--<form id="site-search" class="inlineb">
           <input type="text" class="rounded3">
           <input value="search" type="submit" class="rounded3 search-btn gradient">
-        </form>
+        </form>-->
+          <form id="site-search" class="inlineb search rounded15">
+            <label for="" class="none">поиск:</label><input type="text" placeholder="поиск..."  type="submit" /><button type="submit"></button>
+          </form>
       </nav>
+      <br class="none"/>
   <article class="alert rounded7">с 19:00 до 20:00 будут вестись технические работы</article>
       <section id="main" class="inlineb rounded7">
         
@@ -136,5 +140,29 @@
       (c) 2002-2012 jabber.ru team
     </footer>  
   
-
+<script type="text/javascript">
+$(function(){
+	/*	Placeholder detection */
+	// placeholder polyfill
+	function add(){
+		if($(this).val() == ''){
+			$(this).val($(this).attr('placeholder')).addClass('placeholder');
+		}
+	}
+	function remove(){
+		if($(this).val() == $(this).attr('placeholder')){
+			$(this).val('').removeClass('placeholder');
+		}
+	}
+	// Create a dummy element for feature detection
+	if (!('placeholder' in $('<input>')[0])){
+		// Select the elements that have a placeholder attribute
+		$('input[placeholder], textarea[placeholder]').blur(add).focus(remove).each(add);
+		// Remove the placeholder text before the form is submitted
+		$('form').submit(function(){
+			$(this).find('input[placeholder], textarea[placeholder]').each(remove);
+		});
+	}
+});
+</script>
 </body></html>
