@@ -177,6 +177,10 @@ form#site-search input {
 	color: #fff;
 }
 
+.entry header {
+  clear: both;
+}
+
 .entry header time {
   font-size: 80%;
   font-style: italic;
@@ -185,7 +189,7 @@ form#site-search input {
 .entry header .rounded4{
 	overflow:hidden;
 	float: left;
-	margin:5px;
+	margin:5px 5px 0;
 }
 
 .entry header img {
